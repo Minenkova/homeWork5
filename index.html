@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeWork5</title>
+  </head>
+  <body>
+    <script>
+      console.log(`==========task1==========`);
+
+      function fillArray(length, value) {
+        let array = [];
+        array.length = length;
+        for (let i = 0; i < array.length; i++) {
+          array[i] = value;
+        }
+        return array;
+      }
+      console.log(fillArray(10, "qwerty"));
+
+      console.log(`==========task2==========`);
+      let array = [0, 1, 2, null, undefined, "qwerty", false,];
+      function filterArray(a, b, c, d, e) {
+        for (let i = 0; i < array.length; i++) {
+          if (
+            array[i] !== a &&
+            array[i] !== b &&
+            array[i] !== c &&
+            array[i] !== d &&
+            array[i] !== e
+          ) {
+            array[i];
+            console.log(array[i]);
+          }
+        }
+      }
+
+      console.log(filterArray(false, undefined, '', 0, null));
+
+      console.log(`==========task3==========`);
+
+      function calcSum(...args) {
+        let result = 0;
+
+        for (let arg of args) {
+          result += arg;
+        }
+        return result;
+      }
+      console.log(calcSum(0));
+      console.log(calcSum(1, 2, 3));
+      console.log(calcSum(5, 0, 10, 1, 5));
+
+      console.log(`==========task4==========`);
+
+      function createPipe(string) {
+        return (someText) => `${string}${someText}${string}`;
+      }
+      const pipeFunction = createPipe("=====");
+      console.log(pipeFunction("some text you like"));
+
+      console.log(`==========task5==========`);
+
+      function getSomeText(text, methodOutput) {
+        if (methodOutput === 0) {
+          return alert(text);
+        } else if (methodOutput === 1) {
+          return console.log(text);
+        }
+      }
+
+      getSomeText("text", 1);
+      getSomeText("text", 0);
+    </script>
+  </body>
+</html>
